@@ -15,7 +15,7 @@ namespace Snap.Genshin.MapTrack
 const sleep = m => new Promise(r => setTimeout(r, m))
 async function setPositionLoop(){
     while(true){
-		await setPosition()
+		if(window.L) await setPosition()
         await sleep(200)
     }
 }

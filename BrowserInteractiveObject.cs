@@ -43,6 +43,7 @@ namespace Snap.Genshin.MapTrack
             const float scale = 2f / 3f;
             var result = new float[3];
             var success = GetTransform(ref result[0], ref result[1], ref result[2]);
+            if(!success) return null;
             result[0] *= scale;
             result[1] *= scale;
             result[2] *= -1;
