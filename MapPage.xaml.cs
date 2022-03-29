@@ -45,13 +45,11 @@ async function setPosition(){
         public MapPage()
         {
             this.InitializeComponent();
-            BrowserInteractiveObject.init();
         }
 
         public void Dispose()
         {
             this.WebView?.Dispose();
-            BrowserInteractiveObject.uninit();
         }
         
         private void WindowLoaded(object sender, RoutedEventArgs e)
